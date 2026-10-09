@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/sbicbar/sbicbar.github.io/refs/heads/main/two_series.csv"
+  },
+  "title": "UK annual CPIH",
+  "width": 550,
+  "height": 200,
+  "mark": {"type": "line", "color": "#3A8A2C"},
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "annual inflation",
+        "titleFont": "Time New Roman",
+        "titleFontSize": 14,
+        "labelFontSize": 20
+      }
+    },
+    "color": {"field": "type"}
+  },
+  "config": {}
+}
